@@ -1,0 +1,159 @@
+{
+  "id": "1a11a7c6-1792-400a-8f0d-95d7107bf391",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.load_stats": {
+      "name": "load_stats",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "database": {
+          "name": "database",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "transaction_type": {
+          "name": "transaction_type",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "scaling_factor": {
+          "name": "scaling_factor",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "clients": {
+          "name": "clients",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "threads": {
+          "name": "threads",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tps": {
+          "name": "tps",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "latency_avg": {
+          "name": "latency_avg",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "latency_min": {
+          "name": "latency_min",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "latency_max": {
+          "name": "latency_max",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "latency_p95": {
+          "name": "latency_p95",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "transactions": {
+          "name": "transactions",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "read_operations": {
+          "name": "read_operations",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "write_operations": {
+          "name": "write_operations",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "other_operations": {
+          "name": "other_operations",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total_operations": {
+          "name": "total_operations",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "time_taken": {
+          "name": "time_taken",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "estimated_updates": {
+          "name": "estimated_updates",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "estimated_inserts": {
+          "name": "estimated_inserts",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "error": {
+          "name": "error",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

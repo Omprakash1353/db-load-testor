@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  db:
+    image: postgres
+    container_name: db
+    ports:
+      - 5000:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: testor
+      POSTGRES_PASSWORD: postgres
+      PGDATA: /data/postgres
+    volumes:
+      - ./data/postgres:/data/postgres
+
+volumes:
+  postgres:

@@ -1,0 +1,23 @@
+CREATE TABLE "load_stats" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"database" text,
+	"transaction_type" text,
+	"scaling_factor" integer,
+	"clients" integer,
+	"threads" integer,
+	"tps" integer,
+	"latency_avg" integer,
+	"latency_min" integer,
+	"latency_max" integer,
+	"latency_p95" integer,
+	"transactions" integer,
+	"read_operations" integer,
+	"write_operations" integer,
+	"other_operations" integer,
+	"total_operations" integer,
+	"time_taken" integer,
+	"estimated_updates" integer,
+	"estimated_inserts" integer,
+	"error" integer,
+	"created_at" timestamp DEFAULT now()
+);
