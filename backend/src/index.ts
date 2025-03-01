@@ -6,6 +6,7 @@ import { stats } from "./db/schema";
 import { pgScript } from "./scripts/pg";
 import { sqlScript } from "./scripts/sql";
 import { eq } from "drizzle-orm";
+import { mongoScript } from "./scripts/mongo";
 
 export const wss = new WebSocketServer({ port: 8080 });
 const app = new Hono();
@@ -81,6 +82,25 @@ app.post("/run-mysql", async (c) => {
     );
   } catch (error) {
     console.error("Error in /run-mysql:", error);
+    return c.json({ error: "Invalid request body" }, 400);
+  }
+});
+
+app.post("/run-mongo", async (c) => {
+  try {
+    const body = await c.req.json();
+    const clients = body.clients || 10;
+    const threads = body.threads || 2;
+    const scale = body.scale || 100;
+
+    mongoScript({ clients, threads, scale });
+
+    return c.json(
+      { message: "Script started. Check back later for results." },
+      202
+    );
+  } catch (error) {
+    console.error("Error in /run-mongo:", error);
     return c.json({ error: "Invalid request body" }, 400);
   }
 });

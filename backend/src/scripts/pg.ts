@@ -9,7 +9,7 @@ interface PgParams {
   scale: number;
 }
 
-interface BenchmarkData {
+interface BenchmarkData { 
   database: string;
   transactionType: string;
   scalingFactor: number;

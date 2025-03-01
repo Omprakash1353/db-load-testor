@@ -56,10 +56,9 @@ const DEFAULT_CONFIGS = {
     testDuration: "60",
   },
   mongodb: {
+    clients: "10",
     threads: "2",
-    operations: "1000000",
-    recordcount: "1000000",
-    workload: "workloada",
+    scale: "100",
     testDuration: "60",
   },
 } as const;
@@ -352,19 +351,16 @@ function MongoForm({
     <Card className="border-border bg-card">
       <CardHeader>
         <CardTitle className="text-foreground">
-          MongoDB YCSB Configuration
+          MongoDB Benchmark Configuration
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-6">
         <div className="grid grid-cols-2 gap-6">
+          {renderFormInput("clients", "Clients", "10")}
           {renderFormInput("threads", "Threads", "2")}
-          {renderFormInput("operations", "Operations", "1000000")}
         </div>
         <div className="grid grid-cols-2 gap-6">
-          {renderFormInput("recordcount", "Record Count", "1000000")}
-          {renderFormInput("workload", "Workload Type", "workloada")}
-        </div>
-        <div className="grid grid-cols-2 gap-6">
+          {renderFormInput("scale", "Scale", "100")}
           {renderFormInput("testDuration", "Test Duration (seconds)", "60")}
         </div>
       </CardContent>

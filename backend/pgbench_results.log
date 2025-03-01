@@ -5,8 +5,8 @@ query mode: simple
 number of clients: 10
 number of threads: 2
 duration: 60 s
-number of transactions actually processed: 15788
-latency average = 36.650 ms
-latency stddev = 215.689 ms
-initial connection time = 450.014 ms
-tps = 260.265215 (without initial connection time)
+number of transactions actually processed: 15095
+latency average = 37.832 ms
+latency stddev = 227.759 ms
+initial connection time = 193.148 ms
+tps = 250.327602 (without initial connection time)
